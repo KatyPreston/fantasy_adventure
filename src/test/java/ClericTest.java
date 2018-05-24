@@ -6,10 +6,12 @@ import static junit.framework.TestCase.assertEquals;
 public class ClericTest {
 
     Cleric cleric;
+    Knight knight;
 
     @Before
     public void before(){
         cleric = new Cleric(200, RegenTools.BLUEPOTION);
+        knight = new Knight("Knight", WeaponType.SWORD, 100);
     }
 
     @Test
@@ -26,6 +28,13 @@ public class ClericTest {
     public void canChangeRegenTool(){
         cleric.setRegenTool(RegenTools.REDPOTION);
         assertEquals(RegenTools.REDPOTION, cleric.getRegenTools());
+    }
+
+    @Test
+    public void canHealAlly(){
+        knight.takeDamage(55);
+        cleric.attack(knight);
+        assertEquals(95, knight.getHealth());
     }
 
 

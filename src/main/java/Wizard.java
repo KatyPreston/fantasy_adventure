@@ -35,6 +35,10 @@ public class Wizard implements IFight {
         this.health -= amount;
     }
 
+    public void healDamage(int amount){
+        this.health += amount;
+    }
+
     public void setSpell(SpellType spell) {
         this.spell = spell;
     }

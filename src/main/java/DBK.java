@@ -31,6 +31,10 @@ public abstract class DBK implements IFight {
         this.health -= amount;
     }
 
+    public void healDamage(int amount){
+        this.health += amount;
+    }
+
     public void setWeapon(WeaponType weapon) {
         this.weapon = weapon;
     }

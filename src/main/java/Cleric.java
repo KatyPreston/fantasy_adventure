@@ -20,12 +20,16 @@ public class Cleric implements IFight {
         this.health -= amount;
     }
 
+    public void healDamage(int amount){
+        this.health += amount;
+    }
+
     public void setRegenTool(RegenTools regenTool) {
         this.regenTools = regenTool;
     }
 
     public void attack(IFight iFight) {
-        iFight.takeDamage(this.regenTools.getValue());
+        iFight.healDamage(this.regenTools.getValue());
     }
 
 }
