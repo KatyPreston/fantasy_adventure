@@ -23,6 +23,10 @@ public class Wizard implements IFight {
         return this.health;
     }
 
+    public Familiar getFamiliar() {
+        return this.familiar;
+    }
+
     public int getAttackValueFromEnum() {
         return this.spell.getValue();
     }
@@ -33,5 +37,20 @@ public class Wizard implements IFight {
 
     public void setSpell(SpellType spell) {
         this.spell = spell;
+    }
+
+    public String callFamiliar(Familiar familiar) {
+        this.familiar = familiar;
+        this.useFamiliarHealth(familiar.getHealth());
+        return "Come to me, Dragon";
+    }
+
+    public void useFamiliarHealth(int amount) {
+        amount = this.familiar.getHealth();
+        this.health += amount;
+    }
+
+    public void attack(IFight iFight) {
+        iFight.takeDamage(this.spell.getValue());
     }
 }

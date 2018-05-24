@@ -14,4 +14,6 @@ public abstract class Familiar {
     public int getHealth(){
         return this.health;
     }
+
+
 }

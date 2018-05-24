@@ -6,10 +6,12 @@ import static junit.framework.TestCase.assertEquals;
 public class BarbarianTest {
 
     Barbarian barbarian;
+    IFight barbarian2;
 
     @Before
     public void before(){
         barbarian = new Barbarian("Barbarian", WeaponType.CLUB, 100);
+        barbarian2 = new Barbarian( "Barbarian", WeaponType.CLUB, 100);
     }
 
     @Test
@@ -37,5 +39,12 @@ public class BarbarianTest {
     public void canChangeWeapon(){
         barbarian.setWeapon(WeaponType.SWORD);
         assertEquals(WeaponType.SWORD, barbarian.getWeapon());
+    }
+
+    @Test
+    public void dealDamage(){
+        barbarian = new Barbarian("Barbarian", WeaponType.CLUB, 100);
+        barbarian2.attack(barbarian);
+        assertEquals(95, barbarian.getHealth());
     }
 }

@@ -4,8 +4,8 @@ public class Cleric implements IFight {
         private RegenTools regenTools;
 
     public Cleric(int health, RegenTools regenTools){
-            this.health = health;
-            this.regenTools = regenTools;
+        this.health = health;
+        this.regenTools = regenTools;
         }
 
     public int getHealth() {
@@ -23,4 +23,9 @@ public class Cleric implements IFight {
     public void setRegenTool(RegenTools regenTool) {
         this.regenTools = regenTool;
     }
+
+    public void attack(IFight iFight) {
+        iFight.takeDamage(this.regenTools.getValue());
+    }
+
 }

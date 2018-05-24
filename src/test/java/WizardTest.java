@@ -5,10 +5,12 @@ import static junit.framework.TestCase.assertEquals;
 
 public class WizardTest {
     Wizard wizard;
+    Dragon dragon;
 
     @Before
     public void before(){
         wizard = new Wizard("Harry", SpellType.FIREBALL, 150);
+        dragon = new Dragon("Dragon", 50);
     }
 
     @Test
@@ -30,5 +32,22 @@ public class WizardTest {
     public void canChangeSpell(){
         wizard.setSpell(SpellType.WATERBLAST);
         assertEquals(SpellType.WATERBLAST, wizard.getSpell());
+    }
+
+    @Test
+    public void canCallFamiliar(){
+        wizard.callFamiliar(dragon);
+        assertEquals(dragon, wizard.getFamiliar());
+    }
+
+    @Test
+    public void canAddFamiliarToHealth(){
+        wizard.callFamiliar(dragon);
+        assertEquals(200, wizard.getHealth());
+    }
+
+    @Test
+    public void onlyAddsHealthIfHaveFamiliar(){
+        assertEquals(150, wizard.getHealth());
     }
 }

@@ -34,4 +34,8 @@ public abstract class DBK implements IFight {
     public void setWeapon(WeaponType weapon) {
         this.weapon = weapon;
     }
+
+    public void attack(IFight iFight) {
+        iFight.takeDamage(this.weapon.getValue());
+    }
 }
