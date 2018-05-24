@@ -6,4 +6,12 @@ public abstract class Familiar {
         this.type = type;
         this.health = health;
     }
+
+    public String getType() {
+        return this.type;
+    }
+
+    public int getHealth(){
+        return this.health;
+    }
 }
