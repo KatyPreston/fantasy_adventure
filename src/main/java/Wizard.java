@@ -1,4 +1,4 @@
-public class Wizard {
+public class Wizard implements IFight {
     String name;
     SpellType spell;
     Familiar familiar;
@@ -25,5 +25,13 @@ public class Wizard {
 
     public int getAttackValueFromEnum() {
         return this.spell.getValue();
+    }
+
+    public void takeDamage(int amount) {
+        this.health -= amount;
+    }
+
+    public void setSpell(SpellType spell) {
+        this.spell = spell;
     }
 }

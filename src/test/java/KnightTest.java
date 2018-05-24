@@ -25,5 +25,6 @@ public class KnightTest {
         public void canGetHealth(){
             assertEquals(100, knight.getHealth());
         }
+
     }
 

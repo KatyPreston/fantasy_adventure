@@ -25,4 +25,10 @@ public class WizardTest {
     public void canGetHealth(){
         assertEquals(150, wizard.getHealth());
     }
+
+    @Test
+    public void canChangeSpell(){
+        wizard.setSpell(SpellType.WATERBLAST);
+        assertEquals(SpellType.WATERBLAST, wizard.getSpell());
+    }
 }

@@ -32,4 +32,10 @@ public class BarbarianTest {
         barbarian.takeDamage(20);
         assertEquals(80, barbarian.getHealth());
     }
+
+    @Test
+    public void canChangeWeapon(){
+        barbarian.setWeapon(WeaponType.SWORD);
+        assertEquals(WeaponType.SWORD, barbarian.getWeapon());
+    }
 }

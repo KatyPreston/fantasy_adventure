@@ -1,12 +1,11 @@
-public class Cleric {
+public class Cleric implements IFight {
 
-        int health;
-        RegenTools regenTools;
+        private int health;
+        private RegenTools regenTools;
 
-        public Cleric(int health, RegenTools regenTools){
+    public Cleric(int health, RegenTools regenTools){
             this.health = health;
             this.regenTools = regenTools;
-
         }
 
     public int getHealth() {
@@ -15,5 +14,13 @@ public class Cleric {
 
     public RegenTools getRegenTools() {
         return regenTools;
+    }
+
+    public void takeDamage(int amount) {
+        this.health -= amount;
+    }
+
+    public void setRegenTool(RegenTools regenTool) {
+        this.regenTools = regenTool;
     }
 }

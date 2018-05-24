@@ -22,5 +22,11 @@ public class ClericTest {
         assertEquals(RegenTools.BLUEPOTION, cleric.getRegenTools());
     }
 
+    @Test
+    public void canChangeRegenTool(){
+        cleric.setRegenTool(RegenTools.REDPOTION);
+        assertEquals(RegenTools.REDPOTION, cleric.getRegenTools());
+    }
+
 
     }
