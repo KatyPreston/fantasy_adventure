@@ -1,6 +1,6 @@
 public enum WeaponType {
     SWORD(10),
-    AXE(15),
+    AXE(10),
     CLUB(5);
 
     private final int value;

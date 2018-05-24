@@ -2,7 +2,7 @@ public abstract class DBK implements IFight {
 
     private String type;
     private WeaponType weapon;
-    private int health;
+    private int health ;
 
 
     public DBK(String type, WeaponType weapon, int health){
