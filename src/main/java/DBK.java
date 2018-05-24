@@ -1,4 +1,4 @@
-public abstract class DBK {
+public abstract class DBK implements IFight {
 
     private String type;
     private WeaponType weapon;
@@ -25,6 +25,10 @@ public abstract class DBK {
 
     public int getAttackValueFromEnum() {
         return this.weapon.getValue();
+    }
+
+    public void takeDamage(int amount) {
+        this.health -= amount;
     }
 
 }
