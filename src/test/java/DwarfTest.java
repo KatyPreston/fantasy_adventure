@@ -30,4 +30,10 @@ public class DwarfTest {
     public void canGetRiches(){
         assertEquals(0, dwarf.getRiches(), 0.1);
     }
+
+    @Test
+    public void canWinRiches(){
+        dwarf.winRiches(10);
+        assertEquals(10, dwarf.getRiches(), 0.1);
+    }
 }

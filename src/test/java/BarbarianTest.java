@@ -53,4 +53,10 @@ public class BarbarianTest {
         barbarian2.attack(barbarian);
         assertEquals(95, barbarian.getHealth());
     }
+
+    @Test
+    public void canWinRiches(){
+        barbarian.winRiches(10);
+        assertEquals(10, barbarian.getRiches(), 0.1);
+    }
 }

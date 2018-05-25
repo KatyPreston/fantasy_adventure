@@ -35,6 +35,12 @@ public class DungeonTest {
     }
 
     @Test
+    public void canHaveGoldStolen(){
+        dungeon.goldIsStolenBy(iFight);
+        assertEquals(0, dungeon.getGold(), 0.1);
+    }
+
+    @Test
     public void canDefeatBoss(){
         dungeon.fight(knight);
         assertEquals(0, boss.getHealth());

@@ -55,4 +55,10 @@ public class WizardTest {
     public void onlyAddsHealthIfHaveFamiliar(){
         assertEquals(150, wizard.getHealth());
     }
+
+    @Test
+    public void canWinRiches(){
+        wizard.winRiches(10);
+        assertEquals(10, wizard.getRiches(), 0.1);
+    }
 }

@@ -42,5 +42,11 @@ public class ClericTest {
         assertEquals(95, knight.getHealth());
     }
 
+    @Test
+    public void canWinRiches(){
+        cleric.winRiches(10);
+        assertEquals(10, cleric.getRiches(), 0.1);
+    }
+
 
     }

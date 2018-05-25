@@ -31,5 +31,11 @@ public class KnightTest {
             assertEquals(0, knight.getRiches(), 0.1);
         }
 
+    @Test
+    public void canWinRiches(){
+        knight.winRiches(10);
+        assertEquals(10, knight.getRiches(), 0.1);
+    }
+
     }
 
