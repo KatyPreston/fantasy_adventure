@@ -1,6 +1,6 @@
 public enum RegenTools {
 
-    GREENTOOL(10),
+    GREENPOTION(10),
     REDPOTION(25),
     BLUEPOTION(50);
 

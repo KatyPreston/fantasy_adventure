@@ -2,6 +2,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertEquals;
+import static junit.framework.TestCase.assertTrue;
 
 public class BarbarianTest {
 
@@ -10,8 +11,8 @@ public class BarbarianTest {
 
     @Before
     public void before(){
-        barbarian = new Barbarian("Barbarian", WeaponType.CLUB, 100);
-        barbarian2 = new Barbarian( "Barbarian", WeaponType.CLUB, 100);
+        barbarian = new Barbarian("Barbarian", WeaponType.CLUB, 100, 0);
+        barbarian2 = new Barbarian( "Barbarian", WeaponType.CLUB, 100, 0);
     }
 
     @Test
@@ -30,6 +31,11 @@ public class BarbarianTest {
     }
 
     @Test
+    public void canGetRiches(){
+        assertEquals(0, barbarian.getRiches(), 0.1);
+    }
+
+    @Test
     public void canTakeDamage(){
         barbarian.takeDamage(20);
         assertEquals(80, barbarian.getHealth());
@@ -43,7 +49,7 @@ public class BarbarianTest {
 
     @Test
     public void dealDamage(){
-        barbarian = new Barbarian("Barbarian", WeaponType.CLUB, 100);
+        barbarian = new Barbarian("Barbarian", WeaponType.CLUB, 100, 0);
         barbarian2.attack(barbarian);
         assertEquals(95, barbarian.getHealth());
     }

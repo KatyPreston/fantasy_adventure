@@ -10,8 +10,8 @@ public class ClericTest {
 
     @Before
     public void before(){
-        cleric = new Cleric(200, RegenTools.BLUEPOTION);
-        knight = new Knight("Knight", WeaponType.SWORD, 100);
+        cleric = new Cleric(200, RegenTools.BLUEPOTION, 0);
+        knight = new Knight("Knight", WeaponType.SWORD, 100, 0);
     }
 
     @Test
@@ -22,6 +22,11 @@ public class ClericTest {
     @Test
     public void canGetRegenTool(){
         assertEquals(RegenTools.BLUEPOTION, cleric.getRegenTools());
+    }
+
+    @Test
+    public void canGetRiches(){
+        assertEquals(0, cleric.getRiches(), 0.1);
     }
 
     @Test

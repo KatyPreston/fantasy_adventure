@@ -8,7 +8,7 @@ public class DwarfTest {
 
     @Before
     public void before(){
-        dwarf = new Dwarf("Dwarf", WeaponType.AXE, 100);
+        dwarf = new Dwarf("Dwarf", WeaponType.AXE, 100, 0);
     }
 
     @Test
@@ -24,5 +24,10 @@ public class DwarfTest {
     @Test
     public void canGetHealth(){
         assertEquals(100, dwarf.getHealth());
+    }
+
+    @Test
+    public void canGetRiches(){
+        assertEquals(0, dwarf.getRiches(), 0.1);
     }
 }

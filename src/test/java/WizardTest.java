@@ -9,7 +9,7 @@ public class WizardTest {
 
     @Before
     public void before(){
-        wizard = new Wizard("Harry", SpellType.FIREBALL, 150);
+        wizard = new Wizard("Harry", SpellType.FIREBALL, 150, 0);
         dragon = new Dragon("Dragon", 50);
     }
 
@@ -26,6 +26,11 @@ public class WizardTest {
     @Test
     public void canGetHealth(){
         assertEquals(150, wizard.getHealth());
+    }
+
+    @Test
+    public void canGetRiches(){
+        assertEquals(0, wizard.getRiches(), 0.1);
     }
 
     @Test

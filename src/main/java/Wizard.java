@@ -3,12 +3,14 @@ public class Wizard implements IFight {
     SpellType spell;
     Familiar familiar;
     int health;
+    double riches;
 
-    public Wizard(String name, SpellType spell, int health){
+    public Wizard(String name, SpellType spell, int health, double riches){
         this.name = name;
         this.spell = spell;
         this.health = health;
         this.familiar = null;
+        this.riches = riches;
     }
 
     public String getName() {
@@ -25,6 +27,10 @@ public class Wizard implements IFight {
 
     public Familiar getFamiliar() {
         return this.familiar;
+    }
+
+    public double getRiches(){
+        return this.riches;
     }
 
     public int getAttackValueFromEnum() {
@@ -56,5 +62,9 @@ public class Wizard implements IFight {
 
     public void attack(IFight iFight) {
         iFight.takeDamage(this.spell.getValue());
+    }
+
+    public void winRiches(double gold){
+        this.riches += gold;
     }
 }

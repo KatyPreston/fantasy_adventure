@@ -1,11 +1,13 @@
 public class Cleric implements IFight {
 
-        private int health;
-        private RegenTools regenTools;
+    private int health;
+    private RegenTools regenTools;
+    private double riches;
 
-    public Cleric(int health, RegenTools regenTools){
+    public Cleric(int health, RegenTools regenTools, double riches){
         this.health = health;
         this.regenTools = regenTools;
+        this.riches = riches;
         }
 
     public int getHealth() {
@@ -14,6 +16,10 @@ public class Cleric implements IFight {
 
     public RegenTools getRegenTools() {
         return regenTools;
+    }
+
+    public double getRiches(){
+        return this.riches;
     }
 
     public void takeDamage(int amount) {
@@ -30,6 +36,10 @@ public class Cleric implements IFight {
 
     public void attack(IFight iFight) {
         iFight.healDamage(this.regenTools.getValue());
+    }
+
+    public void winRiches(double gold){
+        this.riches += gold;
     }
 
 }

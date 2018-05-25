@@ -1,7 +1,8 @@
 public interface IFight {
 
-    public void attack(IFight iFight);
-    public void takeDamage(int amount);
-    public void healDamage(int amount);
+    void attack(IFight iFight);
+    void takeDamage(int amount);
+    void healDamage(int amount);
+    void winRiches(double gold);
 
 }

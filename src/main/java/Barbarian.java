@@ -1,7 +1,7 @@
-public class Barbarian extends DBK implements IFight{
+public class Barbarian extends DBK{
 
-    public Barbarian(String type, WeaponType weapon, int health){
-        super(type, weapon, health);
+    public Barbarian(String type, WeaponType weapon, int health, double riches){
+        super(type, weapon, health, riches);
     }
 
 
